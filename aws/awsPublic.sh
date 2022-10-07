@@ -1,0 +1,1 @@
+ssh -i "publicec2_20.pem" ubuntu@ec2-13-232-236-175.ap-south-1.compute.amazonaws.com

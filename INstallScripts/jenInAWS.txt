@@ -1,0 +1,31 @@
+######JENKINS INSTALLATION SCRIPTS ####################
+sudo yum -y update
+sudo amazon-linux-extras install java-openjdk11
+java --version
+sudo tee /etc/yum.repos.d/jenkins.repo<<EOF
+[jenkins]
+name=Jenkins
+baseurl=http://pkg.jenkins.io/redhat
+gpgcheck=0
+EOF
+sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+sudo yum repolist
+sudo yum install jenkins
+sudo systemctl start jenkins
+systemctl status jenkins
+sudo ss -tunelp | grep 8080
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+
+############---- GIT ------####
+#Create an EC2 instance with Amazon Linux 2 with internet access
+#Connect to your instance using putty
+ 
+#Perform a quick update on your instance:
+sudo yum update -y
+ 
+#Install git in your EC2 instance
+sudo yum install git -y
+ 
+#Check git version
+git version 

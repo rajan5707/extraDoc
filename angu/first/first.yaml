@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # Kubernetes API version
+kind: Deployment  # Kubernetes resource kind we are creating
+metadata:
+  name: angv1
+spec:
+  selector:
+    matchLabels:
+      app: angular
+  replicas: 5 # Number of replicas that will be created for this deployment
+  template:
+    metadata:
+      labels:
+        app: angular
+    spec:
+      containers:
+      - name: angular
+        image: rajan9886886836/angul:av1
+        ports:
+        - containerPort: 80 # The port that the container is running on in the cluster

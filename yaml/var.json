@@ -1,0 +1,16 @@
+{
+  "queue": {
+    "first": {
+      "car": "bmw",
+      "year": "1990",
+      "model": "x3",
+      "color": "blue"
+    },
+    "second": {
+      "car": "bmw",
+      "year": "2000",
+      "model": "318",
+      "color": "red"
+    }
+  }
+}
